@@ -1,0 +1,20 @@
+<?php
+include("../../includes.php");
+include("../../redirect.php");
+
+
+$Es="select * from financial_year where fyear='".$_POST['fyear']."' and status='Active'"; 
+$Eps=mysqli_query($conn,$Es);
+$duplicate=mysqli_fetch_array($Eps);
+
+if($duplicate==0)
+{
+$in="insert into  financial_year set fyear='".$_POST['fyear']."',userid='".$_POST['userid']."',sdescription='".$_POST['sdescription']."',status='Active'";
+$Ein=mysqli_query($conn,$in);
+header("location:financial_year.php?s=Date Save Sucessfully");
+}
+else
+{
+	header("location:financial_year.php?a=Already Exiting");
+}
+?>

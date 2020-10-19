@@ -1,0 +1,9 @@
+[08-Feb-2019 09:20:26 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[01-Mar-2019 11:21:43 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[01-Mar-2019 11:39:00 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[01-Mar-2019 11:51:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[01-Mar-2019 11:53:16 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[01-Mar-2019 17:23:16 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/redirect.php on line 2
+[01-Mar-2019 17:23:16 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/header.php on line 259
+[01-Mar-2019 17:23:16 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/header.php on line 262
+[01-Mar-2019 17:23:16 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/leftbar.php on line 13

@@ -1,0 +1,8 @@
+<?php
+include("../../includes.php");
+include("../../redirect.php");
+
+
+
+header("location:sales_report_payment_mode.php?from=".$_POST['from']."&to=".$_POST['to']."&payment_mode=".$_POST['payment_mode']."");
+?>

@@ -1,0 +1,3 @@
+[02-Nov-2019 20:37:53 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[03-Nov-2019 02:07:53 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[03-Nov-2019 02:07:53 Asia/Calcutta] PHP Notice:  Undefined index: inputs in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/services/spare_prepick/get2.php on line 5

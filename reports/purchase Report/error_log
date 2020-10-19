@@ -1,0 +1,3 @@
+[15-Aug-2019 07:22:17 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/aqura.vertexsolution.co.in/dbinfo.php on line 6
+[15-Aug-2019 12:52:18 Asia/Calcutta] PHP Notice:  Undefined index: from in /home/c8mnfezhajnh/public_html/aqura.vertexsolution.co.in/reports/purchase Report/purchase_reports.php on line 98
+[15-Aug-2019 12:52:18 Asia/Calcutta] PHP Notice:  Undefined index: to in /home/c8mnfezhajnh/public_html/aqura.vertexsolution.co.in/reports/purchase Report/purchase_reports.php on line 98

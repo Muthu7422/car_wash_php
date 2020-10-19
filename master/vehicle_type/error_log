@@ -1,0 +1,2 @@
+[13-Nov-2019 07:28:30 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[13-Nov-2019 12:58:30 Asia/Calcutta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/vehicle_type/m_vehicle_type_addQ.php on line 7

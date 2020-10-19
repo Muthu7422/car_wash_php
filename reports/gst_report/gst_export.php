@@ -1,0 +1,101 @@
+<?php
+include("../../includes.php");
+include("../../redirect.php");
+error_reporting(0);
+
+?>
+<!DOCTYPE html>
+<html>
+<?php
+header('Content-type: application/excel');
+$filename = 'GST Report From :'.$_POST['fdate'].' To '.$_POST['tdate'].'.xls';
+header('Content-Disposition: attachment; filename='.$filename);
+$fdate=$_POST['fdate'];
+$tdate=$_POST['tdate'];
+?>
+<body>
+  <table  class="table table-bordered table-striped">
+                <thead>
+				<tr>&nbsp;</tr>
+			 <tr><h3>Company Name : <?php echo $_SESSION['company']?></h3></tr>
+				 <tr><h4>GST Report From : <?php echo $_POST['fdate'];?> To <?php echo $_POST['tdate'];?></h4></tr>
+				
+		<thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Date</th>
+				  <th>Invoice No</th>
+				  <th>Customer Name</th>
+				  <th>Bill Amount</th>
+				   <th>GST Amount</th>
+				  
+				   
+				  </tr>
+                </thead>
+
+
+             
+				<?php
+				
+				$i=0;
+			   
+				$ss="select * from a_final_bill where (bill_date between '$fdate' AND '$tdate') and FrachiseeId='".$_SESSION['BranchId']."' order by bill_date desc";
+				$Ess=mysqli_query($conn,$ss);
+				while($FEss=mysqli_fetch_array($Ess))
+				{
+				    $cust_name="select * from a_customer where id='".$FEss['cname']."'";
+					$cust_nameq=mysqli_query($conn,$cust_name);
+					$cust_namef=mysqli_fetch_array($cust_nameq);
+					 
+					$sjid="select id from s_job_card where job_card_no = '".$FEss['job_card_no']."'";
+				    $Esjid=mysqli_query($conn,$sjid);
+				    $FEsjid=mysqli_fetch_array($Esjid);
+					 
+					$spare_name="select id from s_spare_prepick where s_job_card_no='".$FEsjid['id']."'";
+					$spare_nameq=mysqli_query($conn,$spare_name);
+					$spare_namef=mysqli_fetch_array($spare_nameq);
+					 
+					$spare_detail="select id from s_spare_prepick_details where s_pick_no='".$spare_namef['id']."'";
+					$spare_detailq=mysqli_query($conn,$spare_detail);
+					$spare_detailf=mysqli_fetch_array($spare_detailq);
+					 
+					
+					
+					$s18="SELECT sum((mrp*qty))as total FROM `s_spare_prepick_details` where s_pick_no='".$spare_detailf['id']."' and TaxRate='18.00'";
+					$Es18=mysqli_query($conn,$s18);
+					$FEs18=mysqli_fetch_array($Es18);
+					 $Total18=$FEs18['total'];
+					 
+					$TAmount18=$FEss['TotalServiceAmount']*18/100;
+					
+					
+					$i++;
+					 
+				?>
+              <tr>
+                  <td align="center"><?php echo $i;  ?></td>
+                  <td align="center"><?php echo date("d-m-Y",strtotime($FEss['bill_date'])); ?></td>
+				  <td align="center"><?php echo $FEss['inv_no'];  ?></td>
+				  <td align="center"><?php echo $cust_namef['cust_name']; ?></td>
+				    <td align="center"><?php echo number_format($FEss['Total_bill_Amount'],2); ?></td>
+				    <td align="center"><?php echo number_format($FEss['gst_amt'],2); ?></td>
+					
+				   
+				  </tr>
+				<?php
+$bill_total=$bill_total+$FEss['Total_bill_Amount'];
+$gst_total=$gst_total+$FEss['gst_amt'];				
+			      }				
+				?>
+					<tr>
+                  <td colspan="5" align="right"><?php echo number_format($bill_total,2); ?></td>
+                  <td colspan="0" align="right"><?php echo number_format($gst_total,2); ?></td>
+				  </tr>
+				 </tbody>
+               
+              </table>
+</body>
+
+
+
+</html>

@@ -1,0 +1,52 @@
+[13-Oct-2019 14:55:20 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: Logo in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 8
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[13-Oct-2019 20:25:20 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[15-Oct-2019 20:10:48 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: Logo in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 8
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[16-Oct-2019 01:40:48 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[24-Oct-2019 09:42:07 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[02-Nov-2019 20:37:42 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: Logo in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 8
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[03-Nov-2019 02:07:42 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[07-Dec-2019 16:41:22 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: Logo in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 8
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[07-Dec-2019 22:11:22 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[24-Dec-2019 08:32:37 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: Logo in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 8
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[24-Dec-2019 14:02:37 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[04-Jan-2020 06:17:14 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[04-Jan-2020 06:17:22 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[04-Jan-2020 07:03:49 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[05-Jan-2020 17:00:46 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/dbinfo.php on line 6
+[05-Jan-2020 22:30:46 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[05-Jan-2020 22:30:46 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[05-Jan-2020 22:30:46 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[05-Jan-2020 22:30:46 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[05-Jan-2020 22:30:46 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[18-Jan-2020 23:45:55 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/redirect.php on line 2
+[18-Jan-2020 23:45:55 Asia/Calcutta] PHP Notice:  Undefined index: FranchiseeName in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 259
+[18-Jan-2020 23:45:55 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/header.php on line 262
+[18-Jan-2020 23:45:55 Asia/Calcutta] PHP Notice:  Undefined index: user in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/leftbar.php on line 13
+[18-Jan-2020 23:45:55 Asia/Calcutta] PHP Notice:  Undefined index: id in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_edit.php on line 48
+[21-Feb-2020 20:15:59 Asia/Calcutta] PHP Notice:  Undefined index: ledger_group in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_addQ.php on line 19
+[24-Feb-2020 12:36:20 Asia/Calcutta] PHP Notice:  Undefined index: ledger_group in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/master/supplier/m_supplier_addQ.php on line 19

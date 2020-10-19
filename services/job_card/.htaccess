@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^sivakasi\.autoray\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sivakasi\.autoray\.in$
+RewriteRule ^/?$ "https\:\/\/www\.facebook\.com\/autoraysivakasi\/" [R=301,L]
+

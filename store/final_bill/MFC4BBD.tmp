@@ -1,0 +1,333 @@
+<?php
+include("../../dbinfo.php");
+session_start();
+
+error_reporting(0);
+
+$date=date('d/m/Y');
+ $s="select * from a_final_bill where inv_no='".$_REQUEST['inv_no']."'"; 
+$Es=mysql_query($s);
+$Fs=mysql_fetch_array($Es);
+$n=mysql_num_rows($Es);
+$ino=$n;
+
+  $spm="select * from m_franchisee where id='".$_SESSION['FranchiseeId']."'";;
+$Scm=mysql_query($spm);
+$Frp1=mysql_fetch_array($Scm);
+
+
+ $pr1="select * from m_company where cus_name='".$_SESSION['company']."'";  
+$Epr1=mysql_query($pr1);
+$Fpr1=mysql_fetch_array($Epr1);
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style>
+<style type="text/css" media="print">
+<!--
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+	padding-top:3px;
+	padding-bottom:2px;
+    padding-right:10px;
+    padding-left:10px;
+    text-decoration: none;
+    color: initial;
+}
+@media print { 
+table, table tr, table td { 
+border-top: #000 solid 1px; 
+border-bottom: #000 solid 1px; 
+border-left: #000 solid 1px; 
+border-right: #000 solid 1px; 
+}
+.tds
+{
+border-top: #000 solid 1px; 
+border-bottom: #000 solid 1px; 
+border-left: #000 solid 1px; 
+border-right: #000 solid 1px; 
+}
+}
+
+
+
+
+
+
+
+
+.style2 {font-family: Arial, Helvetica, sans-serif}
+</style>
+<script>
+function printDiv(divName) {
+
+ var printContents = document.getElementById(divName).innerHTML;
+ w=window.open();
+ w.document.write(printContents);
+ w.print();
+ w.close();
+}
+</script>
+<script>
+function getIndianCurrency(float $number)
+{
+    $decimal = round($number - ($no = floor($number)), 2) * 100;
+    $hundred = null;
+    $digits_length = strlen($no);
+    $i = 0;
+    $str = array();
+    $words = array(0 => '', 1 => 'one', 2 => 'two',
+        3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six',
+        7 => 'seven', 8 => 'eight', 9 => 'nine',
+        10 => 'ten', 11 => 'eleven', 12 => 'twelve',
+        13 => 'thirteen', 14 => 'fourteen', 15 => 'fifteen',
+        16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen',
+        19 => 'nineteen', 20 => 'twenty', 30 => 'thirty',
+        40 => 'forty', 50 => 'fifty', 60 => 'sixty',
+        70 => 'seventy', 80 => 'eighty', 90 => 'ninety');
+    $digits = array('', 'hundred','thousand','lakh', 'crore');
+    while( $i < $digits_length ) {
+        $divider = ($i == 2) ? 10 : 100;
+        $number = floor($no % $divider);
+        $no = floor($no / $divider);
+        $i += $divider == 10 ? 1 : 2;
+        if ($number) {
+            $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
+            $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
+            $str [] = ($number < 21) ? $words[$number].' '. $digits[$counter]. $plural.' '.$hundred:$words[floor($number / 10) * 10].' '.$words[$number % 10]. ' '.$digits[$counter].$plural.' '.$hundred;
+        } else $str[] = null;
+    }
+    $Rupees = implode('', array_reverse($str));
+    $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' Paise' : '';
+    return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise .;
+}
+</script>
+</head>
+
+<body oncontextmenu="return false;">
+
+<div id="print-content">
+<table align="center" width="695" border="1"   cellpadding="3"  cellspacing="0">
+<thead>
+ 
+
+<tr>
+<th align="center" colspan="5" ><span style="font-size:28px"><B><?php echo $Frp1['franchisee_name'] ?> </B></span><BR/><?php echo $Frp1['address'] ?>,<BR/><?php echo $Frp1['gst_no'] ?>,<BR/><?php echo $Frp1['cen_manager'] ?><BR/><?php echo $Frp1['con_number'] ?><BR/></th>
+</thead>
+<tbody>
+<tr>
+<td  boalign="LEFT" colspan="2" ><span style="font-size:18px">Customer Name  : <B><?PHP echo $Fs['cname']; ?></B></span><BR/>
+  Mobile No: <B><?PHP echo $Fs['cmobile']; ?></B><BR/>
+  Address : <B><?PHP echo $Fs['caddrs']; ?></B><BR/>
+  Payment Mode: <B><?PHP echo $Fs['ptype']; ?></B></td>
+<td  boalign="LEFT" colspan="1" ><span style="font-size:18px">Date : <b><?PHP echo $Fs['bill_date']; ?></b></span><br/>
+  Invoice No: <b><?PHP echo $Fs['inv_no']; ?></b><br/>
+  Job Card No: <b><?PHP echo $Fs['job_card_no']; ?></b><br/></td>
+</tr>
+<?php 
+$na="select * from a_customer_vehicle_details where cust_name='".$Fs['cname']."'";  
+$nam=mysql_query($na);
+$vehile=mysql_fetch_array($nam);
+
+
+?>
+
+
+  <tr height="15px">
+    
+    <td align="left" colspan="5"><strong>VEHICLE SERVICE DETAILS </strong></td>
+  </tr>
+  <th align="center" colspan="5" style=" height:20px" ><span style="font-size:20px">PACKAGE DETAILS</span></th>
+  
+<tr align="center">
+<td width="92"><b>S:No</b></td>
+<td width="368"><b>Paxkage Name</b></td>
+<td width="209"><b>Amount</b></td>
+</tr>
+
+
+
+<?php
+$tr=0;
+$qt=0;
+$dt=0;
+$trs=0;
+ $gt1="select * from a_final_bill_spare_details where inv_no='".$_REQUEST['inv_no']."' and SpareFrom='Package'"; 
+$Egt1=mysql_query($gt1);
+$Fs1=mysql_fetch_array($Egt1);
+
+
+			$sdm="select *from s_job_card where job_card_no='".$Fs1['job_card_no']."'"; 
+			$scm=mysql_query($sdm);
+			while($dcm=mysql_fetch_array($scm))
+			{
+			$sdm1="select *from s_job_card_pdetails where job_card_no='".$dcm['id']."'"; 
+			$scm1=mysql_query($sdm1);
+			while($dcm1=mysql_fetch_array($scm1))
+			{
+
+
+$i++;
+?>
+
+<tr>
+<td width="92" align="center"><?php echo $i; ?></td>
+<td width="368"><?php echo $dcm1['package_type']; ?></td>
+<td  width="209" align="center"><?php echo $dcm1['package_amt'];?></td>
+</tr>
+<?php 
+}
+}
+?>
+  <th align="center" colspan="5" style=" height:20px" ><span style="font-size:20px">SERVICE DETAILS</span></th>
+  
+<tr align="center">
+<td width="92"><b>S:No</b></td>
+<td width="368"><b>Service  Name</b></td>
+<td width="209"><b>Amount</b></td>
+</tr>
+
+
+
+<?php
+
+ $gt1="select * from a_final_bill_spare_details where inv_no='".$_REQUEST['inv_no']."' and SpareFrom='Service'"; 
+$Egt1=mysql_query($gt1);
+$Fs1=mysql_fetch_array($Egt1);
+
+
+			$sdm="select *from s_job_card where job_card_no='".$Fs1['job_card_no']."'"; 
+			$scm=mysql_query($sdm);
+			while($dcm=mysql_fetch_array($scm))
+			{
+			
+			$sdm1="select *from s_job_card_sdetails where job_card_no='".$dcm['id']."'"; 
+			$scm1=mysql_query($sdm1);
+			while($dcm1=mysql_fetch_array($scm1))
+			{
+
+
+$i++;
+?>
+<?php 
+
+?>
+<tr>
+<td width="92" align="center"><?php echo $i; ?></td>
+<td width="368"><?php echo $dcm1['service_type']; ?></td>
+<td  width="209" align="center"><?php echo $dcm1['st_amt'];?></td>
+</tr>
+<?php 
+}
+}
+?>
+
+<th align="center" colspan="5" style=" height:20px" ><span style="font-size:20px">SPARE DETAILS</span></th>
+  
+<tr align="center">
+<td width="92"><b>S:No</b></td>
+<td width="368"><b>Spare  Name</b></td>
+<td width="209"><b>Amount</b></td>
+</tr>
+
+
+
+<?php
+
+ $gt1="select * from a_final_bill_spare_details where inv_no='".$_REQUEST['inv_no']."'"; 
+$Egt1=mysql_query($gt1);
+while($Fs1=mysql_fetch_array($Egt1))
+{
+
+
+			$sdm="select *from m_spare where sid='".$Fs1['sname']."'"; 
+			$scm=mysql_query($sdm);
+			while($dcm=mysql_fetch_array($scm))
+			{
+			
+			
+
+$i++;
+?>
+<?php 
+
+?>
+<tr>
+<td width="92" align="center"><?php echo $i; ?></td>
+<td width="368"><?php echo $dcm['sname']; ?></td>
+<td  width="209" align="center"><?php echo $dcm['smrp'];?></td>
+</tr>
+<?php 
+}
+}
+?>
+
+<?php
+
+ $gt1="select * from a_final_bill where inv_no='".$_REQUEST['inv_no']."'"; 
+$Egt1=mysql_query($gt1);
+$Fs1=mysql_fetch_array($Egt1);
+
+?>
+
+
+<table>
+   <tr>
+<td  align="right" colspan="2" height="30px"><b> SERVICE AMOUNT :</b> &nbsp;&nbsp;</td>
+<td align="left" colspan="1">&nbsp;&nbsp;<b><?php echo $Fs1['tot_amt'];?></b></td>
+</tr>
+
+<tr>
+<td  align="right" colspan="2" height="30px"><b>TOTAL SERVICE AMOUNT :</b> &nbsp;&nbsp;</td>
+<td align="left" colspan="2">&nbsp;&nbsp;<b><?php echo $Fs['total_amt'];?></b></td>
+</tr>
+
+<tr>
+<td  align="right" colspan="2" height="30px"><b>TOTAL SERVICE AMOUNT :</b> &nbsp;&nbsp;</td>
+<td align="left" colspan="2">&nbsp;&nbsp;<b><?php echo $Fs['total_amt'];?></b></td>
+</tr>
+
+
+
+
+
+</tbody>
+
+
+
+
+
+<?php
+
+$bn="select * from company where comp_name='".$_SESSION['company']."'";
+$Ebn=mysql_query($bn);
+$Fbn=mysql_fetch_array($Ebn);
+
+?>
+<tr>
+
+<td colspan="2" align="left"><B>For<?php echo $_SESSION['company'] ?><BR/><BR />
+    <BR/>
+    Signature</B></td>
+<td width="209" colspan="3" align="right"><B>	Customer Signature<BR/><BR />
+    <BR/>
+</B></td>
+</tr>
+<tr height="30px">
+    
+    <td align="center" colspan="16"><strong>Thank You For Your Business</strong></td>
+  </tr>
+</table>
+</div>
+<h4 align="center"><input type="button" name="print" value="print" onClick="printDiv('print-content')" />&nbsp;&nbsp;&nbsp;<a href="f_bill.php" class="button style2">cancel</a></h4>
+</body>
+</html>

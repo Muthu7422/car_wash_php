@@ -1,0 +1,2 @@
+[19-Jan-2019 09:34:57 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/c8mnfezhajnh/public_html/protouch.vertexsolution.co.in/dbinfo.php on line 10
+[08-May-2020 18:18:11 Asia/Calcutta] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/c8mnfezhajnh/public_html/tidi.vertexsolution.co.in/store/purchase/ajax-list-countries.php on line 15

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset= "UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Star rating using pure CSS</title>
+</head>
+<body>
+
+    <div >
+	<form role="form" method="post" action="../feedback_act1.php" autocomplete="off">
+	<div class="row">
+    <div class="rates col-md-8">
+        <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" /><label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" /><label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" /><label for="star1" title="text">1 star</label>
+	</div>
+	</div>
+	<div class="row">
+    <div class="rates col-md-8">
+        <input type="radio" id="star51" name="rate1" value="5" /><label for="star51" title="text">5 stars</label>
+        <input type="radio" id="star41" name="rate1" value="4" /><label for="star41" title="text">4 stars</label>
+        <input type="radio" id="star31" name="rate1" value="3" /><label for="star31" title="text">3 stars</label>
+        <input type="radio" id="star21" name="rate1" value="2" /><label for="star21" title="text">2 stars</label>
+        <input type="radio" id="star11" name="rate1" value="1" /><label for="star11" title="text">1 star</label>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-lg-2">
+			<button class="btn btn-primary btn-block">Send Feedback</button>
+		</div>
+	</div>
+	</form>
+    
+	</div>
+	
+	
+
+</body>
+
+</html>
